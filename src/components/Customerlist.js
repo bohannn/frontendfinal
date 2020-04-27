@@ -59,7 +59,7 @@ export default function Customerlist() {
     }, [])
 
     const getCustomers = () => {
-        fetch('http://customerrest.herokuapp.com/api/customers')
+        fetch('https://customerrest.herokuapp.com/api/customers')
         .then(response => response.json())
         .then(data => setCustomers(data.content))
         .catch(err => console.error(err))
@@ -67,7 +67,7 @@ export default function Customerlist() {
 
     //Add new customer
     const addCustomer = (customer) => {
-        fetch('http://customerrest.herokuapp.com/api/customers',
+        fetch('https://customerrest.herokuapp.com/api/customers',
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -110,7 +110,7 @@ export default function Customerlist() {
 
     //Add training to customer
     const addTraining = (training) => {
-        fetch('http://customerrest.herokuapp.com/api/trainings', 
+        fetch('https://customerrest.herokuapp.com/api/trainings', 
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
